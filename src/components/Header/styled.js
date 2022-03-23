@@ -17,6 +17,7 @@ export const HeaderComponent = styled.header`
 
     @media only screen and (max-width: 918px) {
         width: 90vw;
+        margin-top: 1.875rem;
     }
 `;
 
@@ -37,6 +38,18 @@ export const Navbar = styled.nav`
 
     @media only screen and (max-width: 918px) {
         display: none;
+        border-top: 1px solid var(--border-menu-mobile);
+        display: ${props => props.showMenuToggle === true ? "flex" : "none"};
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 0;
+        position: absolute;
+        top: 6.5rem;
+        left: 0;
+        z-index: 100;
+        background: var(--background);
+        width: 100vw;
+        height: 51.375rem;
     }
 `;
 
@@ -46,10 +59,20 @@ export const Link = styled.a`
     font-size: var(--font-1);
     font-weight: 400;
     letter-spacing: 0.02em;
-
+    
     &:hover {
         font-weight: 800;
         color: var(--button);
+    }
+
+    @media only screen and (max-width: 918px) {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        text-align: start;
+        height: 3.5rem;
+        padding-left: 1.875rem;
+        border-bottom: 1px solid var(--border);
     }
 `;
 
@@ -97,6 +120,10 @@ export const MenuToggle = styled.button`
     border: none;
 `;
 
-export const MenuIcon = styled.img.attrs({src: openMenu})``;
+export const MenuIcon = styled.img.attrs({src: openMenu})`
+    display: ${props => props.showMenuToggle === true ? "none" : "flex"};
+`;
 
-export const MenuIconClose = styled.img.attrs({src: closeMenu})``;
+export const MenuIconClose = styled.img.attrs({src: closeMenu})`
+    display: ${props => props.showMenuToggle === true ? "flex" : "none"};
+`;
