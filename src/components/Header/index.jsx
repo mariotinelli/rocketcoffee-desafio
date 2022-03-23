@@ -1,5 +1,6 @@
 import React from 'react'
-import { Button, HeaderComponent, Link, Logo, Navbar, TextButton } from './styled';
+import { Button, HeaderComponent, Link, Logo, LogoMobile, MenuIcon, MenuToggle, Navbar, TextButton } from './styled';
+import logoDesktop from '../../assets/logo-desktop.svg'
 
 const links = [
     'Home',
@@ -13,7 +14,12 @@ const Header = () => (
 
     <>
         <HeaderComponent>
-            <Logo />
+            <Logo src={logoDesktop} />
+            <LogoMobile />
+            <MenuToggle>
+                <MenuIcon />
+                {/*<MenuIconClose></MenuIconClose>*/}
+            </MenuToggle>
             <Navbar>
                 {links.map( (link) => (
                     <Link href='#'> {link} </Link>

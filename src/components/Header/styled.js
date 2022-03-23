@@ -1,4 +1,8 @@
 import styled from 'styled-components'
+import arrow from '../../assets/arrow.svg'
+import logoMobile from '../../assets/logo-mobile.svg'
+import openMenu from '../../assets/menu-buguer-open.svg'
+import closeMenu from '../../assets/menu-buguer-close.svg'
 
 export const HeaderComponent = styled.header`
     margin-top: 3.125rem;
@@ -10,20 +14,30 @@ export const HeaderComponent = styled.header`
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @media only screen and (max-width: 918px) {
+        width: 90vw;
+    }
 `;
 
-export const Logo = styled.div`
-    color: white;
-    width: 10.6875rem;
-    height: 2.0488rem;
-    background: url("../../assets/logo-desktop.svg") no-repeat;
+export const Logo = styled.img`
+    display: flex;  
+
+    @media only screen and (max-width: 918px) {
+        display: none;
+    }
 `;
+
 
 export const Navbar = styled.nav`
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 2.0269rem;
+
+    @media only screen and (max-width: 918px) {
+        display: none;
+    }
 `;
 
 export const Link = styled.a`
@@ -32,6 +46,11 @@ export const Link = styled.a`
     font-size: var(--font-1);
     font-weight: 400;
     letter-spacing: 0.02em;
+
+    &:hover {
+        font-weight: 800;
+        color: var(--button);
+    }
 `;
 
 export const Button = styled.button`
@@ -46,6 +65,10 @@ export const Button = styled.button`
     &:hover {
         background-color: var(--button);
     }
+
+    @media only screen and (max-width: 918px) {
+        display: none;
+    }
 `;
 
 export const TextButton = styled.p`
@@ -53,3 +76,27 @@ export const TextButton = styled.p`
     font-size: var(--font-2);
     font-weight: 800;
 `;
+
+
+
+/// Mobile
+
+
+export const LogoMobile = styled.img.attrs({src: logoMobile})`
+    display: none;  
+
+    @media only screen and (max-width: 918px) {
+        display: flex;
+    }
+`;
+
+export const ArrowButton = styled.img.attrs({src: arrow})``;
+
+export const MenuToggle = styled.button`
+    background: #FFF0;
+    border: none;
+`;
+
+export const MenuIcon = styled.img.attrs({src: openMenu})``;
+
+export const MenuIconClose = styled.img.attrs({src: closeMenu})``;
