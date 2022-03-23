@@ -14,8 +14,9 @@ const Section = () => (
             </SectionText>
             <Button>
                 <TextButton> 
-                    PEGAR MEU CAFÉ <ArrowButton />
+                    PEGAR MEU CAFÉ
                 </TextButton>
+                <ArrowButton />
             </Button>
             <GreatText> Great Coffee </GreatText>
             <GreatTextStroke> {"<"}Great Code{"/>"} </GreatTextStroke>

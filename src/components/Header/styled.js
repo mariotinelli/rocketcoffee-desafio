@@ -66,6 +66,8 @@ export const Link = styled.a`
     }
 
     @media only screen and (max-width: 918px) {
+        font-size: var(--font-6);
+        font-weight: 700;
         width: 100%;
         display: flex;
         align-items: center;
@@ -73,6 +75,10 @@ export const Link = styled.a`
         height: 3.5rem;
         padding-left: 1.875rem;
         border-bottom: 1px solid var(--border);
+
+        &:hover {
+            border-left: 5px solid var(--button);
+        }
     }
 `;
 
@@ -81,8 +87,11 @@ export const Button = styled.button`
     height: 2.3125rem;
     border: 1px solid var(--button);
     border-radius: 0.375rem;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
     background: var(--background);
+    letter-spacing: 0.02em;
     cursor: pointer;
 
     &:hover {
@@ -98,6 +107,8 @@ export const TextButton = styled.p`
     color: var(--text-color);
     font-size: var(--font-2);
     font-weight: 800;
+    display: inline-block;
+    margin: 0.625rem 0.625rem;
 `;
 
 
@@ -113,7 +124,12 @@ export const LogoMobile = styled.img.attrs({src: logoMobile})`
     }
 `;
 
-export const ArrowButton = styled.img.attrs({src: arrow})``;
+export const ArrowButton = styled.img.attrs({src: arrow})`
+    width: 0.445rem;
+    height: 0.7131rem;
+    margin-top: 0.625rem;
+    display: inline-block;
+`;
 
 export const MenuToggle = styled.button`
     display: none;
