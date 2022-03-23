@@ -116,8 +116,13 @@ export const LogoMobile = styled.img.attrs({src: logoMobile})`
 export const ArrowButton = styled.img.attrs({src: arrow})``;
 
 export const MenuToggle = styled.button`
+    display: none;
     background: #FFF0;
     border: none;
+
+    @media only screen and (max-width: 918px) {
+        display: flex;
+    }
 `;
 
 export const MenuIcon = styled.img.attrs({src: openMenu})`
